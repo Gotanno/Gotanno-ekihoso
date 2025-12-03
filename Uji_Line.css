@@ -1,0 +1,240 @@
+/* リセット＆基本設定 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  background: #005bbb;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ナビゲーション */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #e0e0e0;
+}
+.tab-link {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.tab-link:hover {
+  background: #d4d4d4;
+}
+.tab-link.active {
+  border-bottom: 3px solid #005bbb;
+  color: #005bbb;
+  font-weight: bold;
+}
+
+/* メインコンテンツ */
+main {
+  padding: 40px 20px;
+}
+
+/* カードグリッド（会社別などで共通利用可能） */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.card h3 {
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.card a {
+  color: #005bbb;
+  text-decoration: none;
+  font-weight: bold;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+.setsumei {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 24px 20px 20px 24px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.with-vertical::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 10;
+  width: 10px;
+  background-color: #005840;
+  
+}
+
+/* 1. 親要素をフレックスコンテナにして中央揃え */
+.setsumei .section-title {
+  display: flex;
+  align-items: center;   /* ← ここがポイント */
+  margin: 0 5px 10px;
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  line-height: 1;
+  color: #222;
+  justify-content: flex-start; /* 横位置を左寄せ（必要に応じて center / space-between など） */
+}
+
+
+
+/* 2. アイコンはフォントサイズに合わせる */
+.KH_number {
+  width: auto;        /* 自動でアスペクト比を維持 */
+  height: 27px;        /* テキスト行の高さに合わせる */
+  margin-right: 7px;/* テキストとの隙間 */
+  margin-top: 3px;
+}
+
+.setsumei hr {
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 0 0 5px 0;
+}
+
+.setsumei .description {
+   margin: 0 5px 0px;
+  font-size: clamp(0.875rem, 0.75rem + 0.3vw, 1rem);
+  line-height: 1.7;
+  color: #444;
+}
+
+/* スマホ時の調整 */
+@media screen and (max-width: 480px) {
+  .setsumei {
+    padding: 16px 12px 12px 16px;
+  }
+  .setsumei .section-title {
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+  }
+}
+.ekibetsu{text-align: center;
+    font-size: 40px;
+    font-family: "Helvetca","ヒラギノ丸ゴ ProN","sans-serif";
+}
+.card-group {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.card {
+  width: calc((100% - 30px * 3) / 4); /* 4列ベース */
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: block; /* <a> でもブロック要素の見た目を保つ */
+  text-decoration: none; /* リンクの下線を消す */
+  color: inherit; /* テキスト色を継承 */
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: calc((100% - 20px * 2) / 3); /* 3列 */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc((100% - 20px) / 2); /* 2列 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%; /* 1列 */
+  }
+}
+
+.card__imgframe {
+  width: 100%;
+  padding-top: 56.25%;
+  background: #bbb;
+  box-sizing: border-box;
+}
+
+.card__textbox {
+  width: 100%;
+  padding: 20px 18px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.card__textbox > * + * {
+  margin-top: 10px;
+}
+
+.card__titletext {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.25;
+  padding-top: 10px; /* 線のスペースを少し上に確保 */
+  text-align: center;
+
+}
+
+.card__titletext::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18;
+  width: 210px; /* 線の長さ */
+  height: 2px;  /* 線の太さ */
+  background-color: #005840; /* 緑色（モスグリーン系なら #006400 なども◎） */
+}
+
+.card__overviewtext {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+.eki_pic {
+  width: 100%;
+  height: 143px; /* 高さを任意に指定 */
+  overflow: hidden;
+}
+
+.eki_pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover or contain */
+  display: block;
+}
