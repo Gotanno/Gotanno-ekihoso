@@ -1,0 +1,217 @@
+/* リセット＆基本設定 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  background: #005bbb;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ナビゲーション */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #e0e0e0;
+}
+.tab-link {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.tab-link:hover {
+  background: #d4d4d4;
+}
+.tab-link.active {
+  border-bottom: 3px solid #005bbb;
+  color: #005bbb;
+  font-weight: bold;
+}
+
+/* メインコンテンツ */
+main {
+  padding: 40px 20px;
+}
+
+/* カードグリッド（会社別などで共通利用可能） */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.card h3 {
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.card a {
+  color: #005bbb;
+  text-decoration: none;
+  font-weight: bold;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+
+.top_1{
+  color: red;
+  text-align: center;
+  font-size: 60px;
+  top: 10px;
+}
+.top_2{
+  text-align: center;
+  font-size: 20px;
+}
+
+/* カルーセル全体 */
+.carousel {
+  /* 水平方向中央寄せ */
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+/* カルーセル内容 */
+.contains {
+  /* サイズは自由に変更してください。*/
+  /* 下の.slideも同じサイズにしてください。 */
+  width: 550px;
+  height: 366px;
+  overflow: hidden;
+  position: relative;
+  list-style: none;
+}
+/* スライド切り換え用ラジオボタンは常に非表示 */
+.slide_select {
+  display: none;
+}
+/* 各スライド */
+.slide {
+  /* サイズは自由に変更してください。*/
+  /* 上の.containsも同じサイズにしてください。 */
+  width: 550px;
+  height: 366px;
+  position: absolute;
+  /* スライドの初期値は選択されていないので透明にしておく */
+  opacity: 0;
+}
+/* 前へ次へボタン */
+.scroll_button {
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 30px;
+  /* 縦中央から20px上の位置 */
+  top: 50%;
+  margin-top: -20px;
+  /* 上辺と右辺のみ幅5pxの枠線 */
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color: #fdfdfd;
+  cursor: pointer;
+  /* 普段はボタンはやや薄くする */
+  opacity: 0.5;
+  /* スライドよりも前面にする */
+  z-index: 3;
+}
+/* ホバー時にボタンを強調 */
+.scroll_button:hover {
+  opacity: 1;
+}
+/* 前へボタン */
+.scroll_prev {
+  left: 20px;
+  /* 上辺と右辺の枠線を回転して"＜"にする */
+  transform: rotate(-135deg);
+}
+/* 次へボタン */
+.scroll_next {
+  right: 20px;
+  /* 上辺と右辺の枠線を回転して"＞"にする */
+  transform: rotate(45deg);
+}
+/* スライド移動ボタンエリア */
+.move_controler {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+}
+/* スライド移動の各ボタン */
+.button_move {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 100%;
+  cursor: pointer;
+  /* 普段はやや薄くする */
+  opacity: 0.5;
+  /* スライドより前面にする */
+  z-index: 2;
+}
+/* ホバー時はやや明るくする */
+.button_move:hover {
+  opacity: 0.75;
+}
+/* スライド移動ボタンの色 */
+.button_move {
+  background-color: #fdfdfd;
+}
+/* 1番目のスライド選択時 */
+/* 1番目のスライドの透明度を0にして表示する */
+.slide_select:nth-of-type(1):checked ~ .slide:nth-of-type(1) {
+  opacity: 1;
+}
+/* スライド移動ボタンの1個目を明るくする */
+/* （今選択されていることが分かるように） */
+.slide_select:nth-of-type(1):checked ~ .move_controler .button_move:nth-of-type(1) {
+  opacity: 1;
+}
+.slide_select:nth-of-type(2):checked ~ .slide:nth-of-type(2) {
+  opacity: 1;
+}
+/* 2番目のスライド選択時（1番目のスライドと同じことをする） */
+.slide_select:nth-of-type(2):checked ~ .move_controler .button_move:nth-of-type(2) {
+  opacity: 1;
+}
+/* 3番目のスライド選択時 */
+.slide_select:nth-of-type(3):checked ~ .slide:nth-of-type(3) {
+  opacity: 1;
+}
+.slide_select:nth-of-type(3):checked ~ .move_controler
+  .button_move:nth-of-type(3) {
+  opacity: 1;
+}
+/* 4番目のスライド選択時 */
+.slide_select:nth-of-type(4):checked ~ .slide:nth-of-type(4) {
+  opacity: 1;
+}
+.slide_select:nth-of-type(4):checked
+  ~ .move_controler
+  .button_move:nth-of-type(4) {
+  opacity: 1;
+}
+
