@@ -1,0 +1,219 @@
+.card-group {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.card {
+  width: calc((100% - 30px * 3) / 4); /* 4列ベース */
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: block; /* <a> でもブロック要素の見た目を保つ */
+  text-decoration: none; /* リンクの下線を消す */
+  color: inherit; /* テキスト色を継承 */
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: calc((100% - 20px * 2) / 3); /* 3列 */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc((100% - 20px) / 2); /* 2列 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%; /* 1列 */
+  }
+}
+
+.card__imgframe {
+  width: 100%;
+  padding-top: 56.25%;
+  background: #bbb;
+  box-sizing: border-box;
+}
+
+.card__textbox {
+  width: 100%;
+  padding: 20px 18px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.card__textbox > * + * {
+  margin-top: 10px;
+}
+/* リセット＆基本設定 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  background: #005bbb;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ナビゲーション */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #e0e0e0;
+}
+.tab-link {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.tab-link:hover {
+  background: #d4d4d4;
+}
+.tab-link.active {
+  border-bottom: 3px solid #005bbb;
+  color: #005bbb;
+  font-weight: bold;
+}
+
+/* メインコンテンツ */
+main {
+  padding: 40px 20px;
+}
+
+/* カードグリッド（会社別などで共通利用可能） */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.card h3 {
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.card a {
+  color: #005bbb;
+  text-decoration: none;
+  font-weight: bold;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+.card__titletext_Main {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.25;
+  padding-top: 10px; /* 線のスペースを少し上に確保 */
+  text-align: center;
+}
+.card__titletext_Main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18px;
+  width: 215px; /* 線の長さ */
+  height: 2px;  /* 線の太さ */
+  background-color: #005840; 
+}
+
+.card__overviewtext {
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+.comp_pic {
+  width: 100%;
+  height: 143px; /* 高さを任意に指定 */
+  overflow: hidden;
+}
+
+.comp_pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover or contain */
+  display: block;
+}
+.card__titletext_Nakanoshima {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.25;
+  padding-top: 10px; /* 線のスペースを少し上に確保 */
+  text-align: center;
+}
+.card__titletext_Nakanoshima::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18px;
+  width: 215px; /* 線の長さ */
+  height: 2px;  /* 線の太さ */
+  background-color: #005840; /* 緑色（モスグリーン系なら #006400 なども◎） */
+}
+.card__titletext_Katano {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.25;
+  padding-top: 10px; /* 線のスペースを少し上に確保 */
+  text-align: center;
+}
+.card__titletext_Katano::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18px;
+  width: 215px; /* 線の長さ */
+  height: 2px;  /* 線の太さ */
+  background-color: #005840; /* 緑色（モスグリーン系なら #006400 なども◎） */
+}
+.card__titletext_Uji {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.25;
+  padding-top: 10px; /* 線のスペースを少し上に確保 */
+  text-align: center;
+}
+.card__titletext_Uji::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18px;
+  width: 215px; /* 線の長さ */
+  height: 2px;  /* 線の太さ */
+  background-color: #005840; /* 緑色（モスグリーン系なら #006400 なども◎） */
+}
