@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="DT01_shibuya" content="width=device-width, initial-scale=1.0" />
+    <title>自動放送のページV2-観月橋駅</title>
+    <link rel="stylesheet" href="C:\Users\cobai\OneDrive\デスクトップ\site\keihan\Uji_Line\KH71_Kangetsukyo\KH71_Kangetsukyo.css"
+  <body bgcolor="whitesmoke">
+<header>
+    <h1>自動放送のページV2</h1>
+  </header>
+  <nav class="tabs">
+    <a href="C:\Users\cobai\OneDrive\デスクトップ\site\announce_pageV2_home.html"      class="tab-link active">ホーム</a>
+    <a href="C:\Users\cobai\OneDrive\デスクトップ\site\kaisyabetsu.html" class="tab-link">駅放送</a>
+    <a href=""  class="tab-link">準備中</a>
+    <a href="C:\Users\cobai\OneDrive\デスクトップ\site\guide.html"     class="tab-link">初めての方へ</a>
+  </nav>
+     <!--駅名標-->
+<body>
+<div class="sign">
+    <div class="slit">
+    <div class="station-number">KH<span>71</span></div>
+
+    <div class="main-kanji">観月橋</div>
+    <div class="main-kana">かんげつきょう</div>
+    </div>
+    <div class="main-romaji"><b>Kangetsukyo</b></div>
+
+    <div class="route-info">
+      <div class="next_l">
+        <b>中書島</b>
+      </div>
+        <br>
+      <div class="eng_l">
+        <b>Chusyojima</b>
+      </div>
+        <div class="next_r"><b>桃山南口</b>
+        </div>
+        <div class="next_n">KH<span>72</span></div>
+        <div class="eng_r">
+        <b>Momoyama-minamiguchi</b>
+        </div>
+    </div>
+
+
+    <!-- 下部白帯 -->
+    
+  </div>
+
+      <!--駅名標-->
+        <hr>
+        <div class="setsubigbox">
+          <div class="setsubox">
+            <div class="gaiyo-toggle-card">
+               <label for="info1" class="gaiyo-heading">■概要</label>
+            </div>
+                <hr>
+            <div class="bikou">
+                <p style="margin: 5px 5px 2px 8px;font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);">
+                ●所在地:京都府京都市伏見区
+                <br>
+                ●スピーカー:TOA円型
+                <br>
+                ●音質:やや悪い
+                <br>
+                ●スピーカー配置:普通
+                <br>
+                ●メロディー等:なし
+                <br><br>
+                <!--説明文<br>で改行-->
+                京都府京都市伏見区に位置する京阪宇治線の駅です。
+                <br>
+                駅名にもなっている観月橋が駅のすぐ隣に位置していますが、交通
+                <br>
+                量が多いので車の雑音が入りやすいです。
+                <br>
+                上下線で改札が分かれているので、一日乗車券を使って録音するの
+                <br>
+                がおすすめです。
+                <!--説明文-->
+                </p>
+
+              
+                <div class="carousel">
+                <!-- スライドのリスト -->
+                <div class="contains">
+                    <!-- スライドを選択するためのラジオボタンリスト。 -->
+                    <!-- 数は増減しても構わないです。 最初は1番目を選択状態(checked)にします。-->
+                    <!-- Slide各ラジオボタンに個別のidを定義して、nameはすべて同じ値にします。 -->
+                    <input class="slide_select" type="radio" id="SlideA" name="slide_check" checked />
+                    <input class="slide_select" type="radio" id="SlideB" name="slide_check" />
+                    <input class="slide_select" type="radio" id="SlideC" name="slide_check" />
+                    <!-- スライド -->
+                    <!-- 上のラジオボックスと同じ数だけ記述します。-->
+                    <div class="slide">
+                    <!-- スライドの前へ、次へとスクロールさせるボタン -->
+                    <div class="scroll_controler">
+                        <!-- 前へボタン forで戻る先のラジオボタンのidを書きます。-->
+                        <!-- 先頭要素なので、最後のスライドのidである"SlideD"を書いています。 -->
+                        <label class="scroll_button scroll_prev" for="SlideC"></label>
+                        <!-- 次へボタン 上と同様にforで進む先のラジオボタンのidを書きます。-->
+                        <!-- 進み先は2番目の要素なので、2番目のスライドのid"SlideB"を書いています。 -->
+                        <label class="scroll_button scroll_next" for="SlideB"></label>
+                    </div>
+                    <!-- スライドの内容（ここでは画像）を記述します。 -->
+                    <!-- div要素に変えれば文字を加えることもできます。 -->
+                    <img src="C:\Users\cobai\OneDrive\デスクトップ\site\keihan\Uji_Line\KH71_Kangetsukyo\IMG_8255.JPG" width="504px" height="336px">
+                    </div>
+                    <!-- スライド（2番目）内容は1個めと同じ -->
+                    <div class="slide">
+                    <div class="controler_scroll">
+                        <label class="scroll_button scroll_prev" for="SlideA"></label>
+                        <label class="scroll_button scroll_next" for="SlideC"></label>
+                    </div>
+                    <img src="C:\Users\cobai\OneDrive\デスクトップ\site\keihan\Uji_Line\KH71_Kangetsukyo\KH71_Kangetsukyo.JPG" width="504px" height="336px">
+                    </div>
+                    <!-- スライド（3番目）内容は1個めと同じ -->
+                    <div class="slide">
+                    <div class="controler_scroll">
+                        <label class="scroll_button scroll_prev" for="SlideB"></label>
+                        <label class="scroll_button scroll_next" for="SlideA"></label>
+                    </div>
+                    <img src="C:\Users\cobai\OneDrive\デスクトップ\site\keihan\Uji_Line\KH71_Kangetsukyo\IMG_8250.JPG" width="504px" height="336px">
+                    </div>
+                    
+                    <!-- スライド移動用ボタン -->
+                    <div class="move_controler">
+                    <!-- 1個目のスライドのボタン -->
+                    <!-- 一番上のラジオボタンの1個目のスライドのid”A”をforに定義します-->
+                    <label class="button_move" for="SlideA"></label>
+                    <label class="button_move" for="SlideB"></label>
+                    <label class="button_move" for="SlideC"></label>
+
+                    </div>
+                </div>
+                </div>
+
+            </div>
+               <hr>
+           <div class="hoso-toggle-card">
+             <input type="checkbox" id="info2" class="hoso-toggle-check">
+               <label for="info2" class="hoso-toggle-heading">■自動放送</label>
+               <div class="hoso-toggle-content"
+                <p style="margin: 5px 5px 2px 8px;font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);">
+                  <b>■上り
+                   <img class="DT_number" src="C:\Users\cobai\OneDrive\デスクトップ\site\keihan\rkh.svg"> 
+                    <span style="color: #005840;">京阪宇治線
+                  </span>中書島・出町柳・淀屋橋・中之島方面
+                  </b></p>
+                  <caption style="text-align: left; font-weight: bold;">
+                <table class="content1" border="1" width="80%" align="center">
+                 <td width="5%" align="center" bgcolor="whitesmoke">
+                  <font size="3">
+                   <b>番線</b>
+                  </font> 
+                 </td>
+                 <td width="5%" align="center" bgcolor="whitesmoke">
+                  <font size="3">
+                   <b>再生</b>
+                  </font>
+                 </td>
+                 <td width="15%" align="center" bgcolor="whitesmoke">
+                <font size="3"><b>放送種類</b>
+                </font>
+                 </td>
+                 <td width="20%" align="center" bgcolor="whitesmoke">
+                <font size="3">
+                  <b>種別・行き先</b>
+                </font>
+                 </td>
+                 <td width="55%"" align="center" bgcolor="whitesmoke">
+                  <font size="3">
+                  <b>付帯など</b>
+                  </font>
+                 </td>
+               <tr>
+                 <td align="center" rowspan="2" width="10" bgcolor="whitesmoke">
+                  <font size="3">1
+                  </font>
+                 </td>
+                 <td rowspan="2" align="center" width="250" bgcolor="whitesmoke">
+                  <font size="3">
+                   <b><a href="Kangetsukyo#1.mp3"><font color="black">♪</font>
+                   </a>
+                   </b>
+                  </font>
+                 </td>
+                 <td align="center" bgcolor="whitesmoke">
+                  <font size="3"><b>接近放送</b>
+                  </font>
+                 </td>
+                 <td align="center" bgcolor="whitesmoke">
+                  <font size="3">
+                  <b>&emsp;</b>
+                  </font>
+                 </td>
+                 <td class="scroll-box" bgcolor="whitesmoke" align="center" style="overflow-x: hidden; white-space: nowrap; padding-top: 2px; padding-bottom: 2px;">
+                <span class="scroll-text">
+                  <b>&emsp;</b>
+                </span>
+                 </td>
+               </tr>
+               <tr>
+                   <td colspan="3" bgcolor="whitesmoke">
+                    <font size="3"><b>&emsp;通過列車が無いので特殊な言い回しの放送が使われています。</b>
+                    </font>
+                   </td> 
+               </tr>
+                </table>    
+                 <p style="margin: 20px 5px 20px 8px;font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);">
+                    <b>■下り
+                     <img class="DTnumber" src="C:\Users\cobai\OneDrive\デスクトップ\site\keihan\rkh.svg" width="20px" height="20px"　>
+                     <span style="color: #005840;">京阪宇治線
+                     </span>六地蔵・宇治方面</b></p>
+                <table class="content2" border="1" width="80%" align="center">
+                 <td width="5%" align="center" bgcolor="whitesmoke">
+                  <font size="3">
+                   <b>番線</b>
+                  </font> 
+                 </td>
+                 <td width="5%" align="center" bgcolor="whitesmoke">
+                  <font size="3">
+                   <b>再生</b>
+                  </font>
+                 </td>
+                 <td width="15%" align="center" bgcolor="whitesmoke">
+                <font size="3"><b>放送種類</b>
+                </font>
+                 </td>
+                 <td width="20%" align="center" bgcolor="whitesmoke">
+                <font size="3">
+                  <b>種別・行き先</b>
+                </font>
+                 </td>
+                 <td width="55%"" align="center" bgcolor="whitesmoke">
+                  <font size="3">
+                  <b>付帯など</b>
+                  </font>
+                 </td>
+               <tr>
+                 <td align="center" rowspan="2" width="10" bgcolor="whitesmoke">
+                  <font size="3">2
+                  </font>
+                 </td>
+                 <td rowspan="2" align="center" width="250" bgcolor="whitesmoke">
+                  <font size="3">
+                   <b><a href="Kangetsukyo#2.mp3"><font color="black">♪</font>
+                   </a>
+                   </b>
+                  </font>
+                 </td>
+                 <td align="center" bgcolor="whitesmoke">
+                  <font size="3"><b>接近放送</b>
+                  </font>
+                 </td>
+                 <td align="center" bgcolor="whitesmoke">
+                  <font size="3">
+                  <b>&emsp;</b>
+                  </font>
+                 </td>
+                 <td class="scroll-box" bgcolor="whitesmoke" align="center" style="overflow-x: hidden; white-space: nowrap; padding-top: 2px; padding-bottom: 2px;">
+                <span class="scroll-text">
+                  <b>&emsp;</b>
+                </span>
+                 </td>
+               </tr>
+               <tr>
+                   <td colspan="3" bgcolor="whitesmoke">
+                    <font size="3"><b>&emsp;駅前の観月橋は"月"を"観る"橋というよりは普通の幹線道路の橋といった感じです。</b>
+                    </font>
+                   </td> 
+               </tr>
+              
+                </table>
+            </div>
+          </div>
+            <hr>
+</body>
+        <div class="big_nextsta">
+            <div class="nextsta">
+              <b>←隣の駅→</b>
+            </div>
+            <div class="tonarieki">
+             <div class="tonari_left" >
+              <a href="">中書島(未作成)</a>
+             </div>   
+             <div class="tonari_right" >
+              <a href="C:\Users\cobai\OneDrive\デスクトップ\site\keihan\Uji_Line\KH72_Momoyama-minamiguchi\KH72_Momoyama-minamiguchi.html">桃山南口</a>
+             </div>   
+            </div>
+            <div class="page_back">
+              <a href="C:\Users\cobai\OneDrive\デスクトップ\site\keihan\Uji_Line\Uji_Line.html">京阪宇治線のページに戻る</a>
+            </div>
+         </div>
+    </header>
+  </body>
+</html>
